@@ -1,0 +1,64 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>StartDate</th>
+    <th>EndDate</th>
+    <th>TotalDays</th>
+    <th>TotalWeeks</th>
+    <th>DoneDays</th>
+    <th>DoneWeeks</th>
+    <th>RemainingDays</th>
+    <th>RemainingWeeks</th>
+    <th>PercentageDone</th>  
+  </tr>
+  <tbody ng-repeat="curriculum in dataSet" ng-click='ShowHide($index)'>
+    <tr>
+      <td>{{curriculum.ID}}</td>
+      <td>{{curriculum.StartDate}}</td>
+      <td>{{curriculum.EndDate}}</td>
+      <td>{{curriculum.TotalDays}}</td>
+      <td>{{curriculum.TotalWeeks}}</td>
+      <td>{{curriculum.DoneDays}}</td>
+      <td>{{curriculum.DoneWeeks}}</td>
+      <td>{{curriculum.RemainingDays }}</td>
+      <td>{{curriculum.RemainingWeeks}}</td>
+      <td>{{curriculum.PercentageDone}}</td>
+    </tr>    
+    <tr ng-show='num == $index'>
+      <td colspan="10">
+      <table>
+        <tr>
+          <th>Day</th>
+          <th>Standing</th>
+          <th>Striking</th>
+          <th>Turning</th>
+          <th>Changing</th>
+        </tr>
+        <tr ng-repeat="program in dataSet[$index].DailyProgram">
+          <td>{{program.Day}}</td>
+          <td>
+            <div ng-repeat="method in program.Standing.Method">
+              <p>{{method | RemoveChar}}</p>
+            </div>
+          </td>
+          <td>
+            <div ng-repeat="method in program.Striking.Method">
+              <p>{{method | RemoveChar}}</p>
+            </div>
+          </td>
+          <td>
+            <div ng-repeat="method in program.Turning.Method">
+              <p>{{method | RemoveChar}}</p>
+            </div>
+          </td>
+          <td>
+            <div ng-repeat="method in program.Changing.Method">
+              <p>{{method | RemoveChar}}</p>
+            </div>
+          </td>
+        </tr>       
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
