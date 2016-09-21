@@ -2,6 +2,7 @@
 <Curriculums>
   <Curriculum>
     <ID>1</ID>
+    <Status>In Progress</Status>
     <StartDate>2016-09-01</StartDate>
     <EndDate>2017-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -214,6 +215,7 @@
   </Curriculum>
   <Curriculum>
     <ID>2</ID>
+    <Status>Not Started</Status>
     <StartDate>2017-01-01</StartDate>
     <EndDate>2017-05-01</EndDate>
     <TotalDays>120</TotalDays>
@@ -426,6 +428,7 @@
   </Curriculum>
   <Curriculum>
     <ID>3</ID>
+    <Status>Not Started</Status>
     <StartDate>2017-05-01</StartDate>
     <EndDate>2017-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -638,6 +641,7 @@
   </Curriculum>
   <Curriculum>
     <ID>4</ID>
+    <Status>Not Started</Status>
     <StartDate>2017-09-01</StartDate>
     <EndDate>2018-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -850,6 +854,7 @@
   </Curriculum>
   <Curriculum>
     <ID>5</ID>
+    <Status>Not Started</Status>
     <StartDate>2018-01-01</StartDate>
     <EndDate>2018-05-01</EndDate>
     <TotalDays>120</TotalDays>
@@ -1062,6 +1067,7 @@
   </Curriculum>
   <Curriculum>
     <ID>6</ID>
+    <Status>Not Started</Status>
     <StartDate>2018-05-01</StartDate>
     <EndDate>2018-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -1274,6 +1280,7 @@
   </Curriculum>
   <Curriculum>
     <ID>7</ID>
+    <Status>Not Started</Status>
     <StartDate>2018-09-01</StartDate>
     <EndDate>2019-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -1486,6 +1493,7 @@
   </Curriculum>
   <Curriculum>
     <ID>8</ID>
+    <Status>Not Started</Status>
     <StartDate>2019-01-01</StartDate>
     <EndDate>2019-05-01</EndDate>
     <TotalDays>120</TotalDays>
@@ -1698,6 +1706,7 @@
   </Curriculum>
   <Curriculum>
     <ID>9</ID>
+    <Status>Not Started</Status>
     <StartDate>2019-05-01</StartDate>
     <EndDate>2019-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -1910,6 +1919,7 @@
   </Curriculum>
   <Curriculum>
     <ID>10</ID>
+    <Status>Not Started</Status>
     <StartDate>2019-09-01</StartDate>
     <EndDate>2020-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -2122,6 +2132,7 @@
   </Curriculum>
   <Curriculum>
     <ID>11</ID>
+    <Status>Not Started</Status>
     <StartDate>2020-01-01</StartDate>
     <EndDate>2020-05-01</EndDate>
     <TotalDays>121</TotalDays>
@@ -2334,6 +2345,7 @@
   </Curriculum>
   <Curriculum>
     <ID>12</ID>
+    <Status>Not Started</Status>
     <StartDate>2020-05-01</StartDate>
     <EndDate>2020-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -2546,6 +2558,7 @@
   </Curriculum>
   <Curriculum>
     <ID>13</ID>
+    <Status>Not Started</Status>
     <StartDate>2020-09-01</StartDate>
     <EndDate>2021-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -2758,6 +2771,7 @@
   </Curriculum>
   <Curriculum>
     <ID>14</ID>
+    <Status>Not Started</Status>
     <StartDate>2021-01-01</StartDate>
     <EndDate>2021-05-01</EndDate>
     <TotalDays>120</TotalDays>
@@ -2970,6 +2984,7 @@
   </Curriculum>
   <Curriculum>
     <ID>15</ID>
+    <Status>Not Started</Status>
     <StartDate>2021-05-01</StartDate>
     <EndDate>2021-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -3182,6 +3197,7 @@
   </Curriculum>
   <Curriculum>
     <ID>16</ID>
+    <Status>Not Started</Status>
     <StartDate>2021-09-01</StartDate>
     <EndDate>2022-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -3394,6 +3410,7 @@
   </Curriculum>
   <Curriculum>
     <ID>17</ID>
+    <Status>Not Started</Status>
     <StartDate>2022-01-01</StartDate>
     <EndDate>2022-05-01</EndDate>
     <TotalDays>120</TotalDays>
@@ -3606,6 +3623,7 @@
   </Curriculum>
   <Curriculum>
     <ID>18</ID>
+    <Status>Not Started</Status>
     <StartDate>2022-05-01</StartDate>
     <EndDate>2022-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -3818,6 +3836,7 @@
   </Curriculum>
   <Curriculum>
     <ID>19</ID>
+    <Status>Not Started</Status>
     <StartDate>2022-09-01</StartDate>
     <EndDate>2023-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -4030,6 +4049,7 @@
   </Curriculum>
   <Curriculum>
     <ID>20</ID>
+    <Status>Not Started</Status>
     <StartDate>2023-01-01</StartDate>
     <EndDate>2023-05-01</EndDate>
     <TotalDays>120</TotalDays>
@@ -4242,6 +4262,7 @@
   </Curriculum>
   <Curriculum>
     <ID>21</ID>
+    <Status>Not Started</Status>
     <StartDate>2023-05-01</StartDate>
     <EndDate>2023-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -4454,6 +4475,7 @@
   </Curriculum>
   <Curriculum>
     <ID>22</ID>
+    <Status>Not Started</Status>
     <StartDate>2023-09-01</StartDate>
     <EndDate>2024-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -4666,6 +4688,7 @@
   </Curriculum>
   <Curriculum>
     <ID>23</ID>
+    <Status>Not Started</Status>
     <StartDate>2024-01-01</StartDate>
     <EndDate>2024-05-01</EndDate>
     <TotalDays>121</TotalDays>
@@ -4878,6 +4901,7 @@
   </Curriculum>
   <Curriculum>
     <ID>24</ID>
+    <Status>Not Started</Status>
     <StartDate>2024-05-01</StartDate>
     <EndDate>2024-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -5090,6 +5114,7 @@
   </Curriculum>
   <Curriculum>
     <ID>25</ID>
+    <Status>Not Started</Status>
     <StartDate>2024-09-01</StartDate>
     <EndDate>2025-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -5302,6 +5327,7 @@
   </Curriculum>
   <Curriculum>
     <ID>26</ID>
+    <Status>Not Started</Status>
     <StartDate>2025-01-01</StartDate>
     <EndDate>2025-05-01</EndDate>
     <TotalDays>120</TotalDays>
@@ -5514,6 +5540,7 @@
   </Curriculum>
   <Curriculum>
     <ID>27</ID>
+    <Status>Not Started</Status>
     <StartDate>2025-05-01</StartDate>
     <EndDate>2025-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -5726,6 +5753,7 @@
   </Curriculum>
   <Curriculum>
     <ID>28</ID>
+    <Status>Not Started</Status>
     <StartDate>2025-09-01</StartDate>
     <EndDate>2026-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -5938,6 +5966,7 @@
   </Curriculum>
   <Curriculum>
     <ID>29</ID>
+    <Status>Not Started</Status>
     <StartDate>2026-01-01</StartDate>
     <EndDate>2026-05-01</EndDate>
     <TotalDays>120</TotalDays>
@@ -6150,6 +6179,7 @@
   </Curriculum>
   <Curriculum>
     <ID>30</ID>
+    <Status>Not Started</Status>
     <StartDate>2026-05-01</StartDate>
     <EndDate>2026-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -6362,6 +6392,7 @@
   </Curriculum>
   <Curriculum>
     <ID>31</ID>
+    <Status>Not Started</Status>
     <StartDate>2026-09-01</StartDate>
     <EndDate>2027-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -6574,6 +6605,7 @@
   </Curriculum>
   <Curriculum>
     <ID>32</ID>
+    <Status>Not Started</Status>
     <StartDate>2027-01-01</StartDate>
     <EndDate>2027-05-01</EndDate>
     <TotalDays>120</TotalDays>
@@ -6786,6 +6818,7 @@
   </Curriculum>
   <Curriculum>
     <ID>33</ID>
+    <Status>Not Started</Status>
     <StartDate>2027-05-01</StartDate>
     <EndDate>2027-09-01</EndDate>
     <TotalDays>123</TotalDays>
@@ -6998,6 +7031,7 @@
   </Curriculum>
   <Curriculum>
     <ID>34</ID>
+    <Status>Not Started</Status>
     <StartDate>2027-09-01</StartDate>
     <EndDate>2028-01-01</EndDate>
     <TotalDays>122</TotalDays>
@@ -7210,6 +7244,7 @@
   </Curriculum>
   <Curriculum>
     <ID>35</ID>
+    <Status>Not Started</Status>
     <StartDate>2028-01-01</StartDate>
     <EndDate>2028-05-01</EndDate>
     <TotalDays>121</TotalDays>

@@ -2,7 +2,7 @@
 
     "use strict";
 
-    var trainingScheduleApp = angular.module('trainingScheduleApp', ['ui.router']);
+    var trainingScheduleApp = angular.module('trainingScheduleApp', ['ui.router', 'dataGrid', 'ngMaterial']);
 
     trainingScheduleApp.constant('VERSION', '0.1');
 
@@ -16,8 +16,7 @@
             });
     });
 
-    trainingScheduleApp.
-    factory('DataSource', ['$http',function($http) {
+     trainingScheduleApp.factory('DataSource', ['$http',function($http) {
         return {
             get: function(file,callback,transform) {
                 $http.get(
@@ -34,13 +33,26 @@
         }
     }]);
 
-    trainingScheduleApp.controller('appCtrl', ['$scope', 'DataSource', function($scope, DataSource) {
+    trainingScheduleApp.controller('appCtrl', ['$scope','DataSource', function($scope, DataSource) {
         
         $scope.ShowHide = function(index){
              $scope.num = index;
              console.log(index);
         };
         
+        $scope.gridOptions = {
+            data: [],
+            urlSync: false
+        }; 
+
+        $scope.statuses = [
+            { id: 1, name: 'In Progress' },
+            { id: 2, name: 'Not Started' },
+            { id: 3, name: 'Complete' }
+        ];
+
+        $scope.selectedStatus = { id: 1, name: 'In Progress' };
+
         var SOURCE_FILE = "data/curriculums.xml";
 
         var xmlTransform = function(data) {
@@ -68,10 +80,11 @@
             }
 
             $scope.dataSet = data;
+
+            
         };
 
         DataSource.get(SOURCE_FILE,setData,xmlTransform);
-
     }]);
 
     trainingScheduleApp.filter('RemoveChar', function() {
