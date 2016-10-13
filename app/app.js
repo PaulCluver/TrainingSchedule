@@ -6,7 +6,7 @@
 
     trainingScheduleApp.constant('VERSION', '0.1');
 
-    trainingScheduleApp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
+    trainingScheduleApp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $mdDateLocaleProvider) {
 
         $urlRouterProvider.otherwise('/home');
         $stateProvider
@@ -14,6 +14,10 @@
                 url: '/home',
                 templateUrl: 'partials/home/home.html'
             });
+
+        $mdDateLocaleProvider.formatDate = function(date) {
+            return moment(date).format('YYYY-MM-DD');
+        };
     });
 
     trainingScheduleApp.factory('DataSource', ['$http', function($http) {
@@ -102,7 +106,7 @@
                     var remainingDays = end.diff(today, 'days');
                     result = data[i].TotalDays - remainingDays;
                 }
-                
+
                 return result;
             }
 
@@ -130,50 +134,50 @@
                         '  <md-dialog-content>' +
                         '   <md-list>' +
                         '      <md-list-item ng-repeat="item in items">' +
-                        
-                        '       <div class=\'parentContainer\'>'+
 
-                        '       <div class=\'childContainer\'>'+
+                        '       <div class=\'parentContainer\'>' +
+
+                        '       <div class=\'childContainer\'>' +
                         '       <md-list>' +
-                        '       <strong>DAY</strong><br />' +                        
-                        '        {{ item[\'Day\']}}   '+
+                        '       <strong>DAY</strong><br />' +
+                        '        {{ item[\'Day\']}}   ' +
                         '       </md-list>' +
                         '       </div>' +
 
-                        '       <div class=\'childContainer\'>'+
+                        '       <div class=\'childContainer\'>' +
                         '       <md-list>' +
-                        '       <strong>STANDING</strong>' +                        
+                        '       <strong>STANDING</strong>' +
                         '           <md-list-item ng-repeat="method in item[\'Standing\'][\'Method\']">' +
-                        '               <span>{{method | RemoveChar}}</span>'+
+                        '               <span>{{method | RemoveChar}}</span>' +
                         '           </md-list-item>' +
                         '       </md-list>' +
                         '       </div>' +
 
-                        '       <div class=\'childContainer\'>'+
+                        '       <div class=\'childContainer\'>' +
                         '       <md-list>' +
-                        '       <strong>STRIKING</strong>' +                          
+                        '       <strong>STRIKING</strong>' +
                         '           <md-list-item ng-repeat="method in item[\'Striking\'][\'Method\']">' +
-                        '               {{method | RemoveChar}}'+
+                        '               {{method | RemoveChar}}' +
                         '           </md-list-item>' +
                         '       </md-list>' +
                         '       </div>' +
 
-                        '       <div class=\'childContainer\'>'+
+                        '       <div class=\'childContainer\'>' +
                         '       <md-list>' +
-                        '       <strong>TURNING</strong>' +                                                  
+                        '       <strong>TURNING</strong>' +
                         '           <md-list-item ng-repeat="method in item[\'Turning\'][\'Method\']">' +
-                        '               {{method | RemoveChar}}'+
+                        '               {{method | RemoveChar}}' +
                         '           </md-list-item>' +
-                        '       </md-list>' +                        
+                        '       </md-list>' +
                         '       </div>' +
 
-                        '       <div class=\'childContainer\'>'+
+                        '       <div class=\'childContainer\'>' +
                         '       <md-list>' +
-                        '       <strong>CHANGING</strong>' +                                                                          
+                        '       <strong>CHANGING</strong>' +
                         '           <md-list-item ng-repeat="method in item[\'Changing\'][\'Method\']">' +
-                        '               {{method | RemoveChar}}'+
+                        '               {{method | RemoveChar}}' +
                         '           </md-list-item>' +
-                        '       </md-list>' +       
+                        '       </md-list>' +
                         '       </div>' +
 
                         '       </div>' +
