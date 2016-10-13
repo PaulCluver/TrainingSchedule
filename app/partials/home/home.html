@@ -8,14 +8,14 @@
         <div layout-gt-xs="row" layout-xs="column" layout-align="stretch center">
             <div layout="row" layout-align="center start">
                 <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs">
-                    <input ng-model="code" class="md-input" ng-change="gridActions.filter()" id="order" placeholder="Search by Order #" filter-by="code" filter-type="text" aria-invalid="false">
+                    <input ng-model="curriculum.ID" class="md-input" ng-change="gridActions.filter()" id="order" placeholder="Search by ID #" filter-by="curriculum.ID" filter-type="text" aria-invalid="false">
                 </md-input-container>
             </div>
             <div layout="row" layout-align="start center">
-                <md-datepicker ng-model="dateFrom" flex="100" md-placeholder="From Date" is-open="dateFromOpened" ng-click="dateFromOpened = true" filter-by="placed" filter-type="dateFrom" ng-change="gridActions.filter()"></md-datepicker>
+                <md-datepicker ng-model="curriculum.StartDate" flex="100" md-placeholder="From Date" is-open="dateFromOpened" ng-click="dateFromOpened = true" filter-by="placed" filter-type="curriculum.StartDate" ng-change="gridActions.filter()"></md-datepicker>
             </div>
             <div layout="row" layout-align="start center">
-                <md-datepicker ng-model="dateTo" flex="100" md-placeholder="To Date" is-open="dateToOpened" ng-click="dateToOpened = true" filter-by="placed" filter-type="dateTo" ng-change="gridActions.filter()"></md-datepicker>
+                <md-datepicker ng-model="curriculum.EndDate" flex="100" md-placeholder="To Date" is-open="dateToOpened" ng-click="dateToOpened = true" filter-by="placed" filter-type="curriculum.EndDate" ng-change="gridActions.filter()"></md-datepicker>
             </div>
         </div>
         <div grid-data id='test' grid-options="gridOptions" grid-actions="gridActions">
@@ -26,62 +26,29 @@
                 <div flex-gt-sm="75" flex-xs="100">
                     <div layout-xs="column" layout="row" layout-align-xs="end end" layout-align="end center">
                         <grid-pagination max-size="5" boundary-links="true" class="pagination mdl-shadow--2dp" ng-if="paginationOptions.totalItems  > paginationOptions.itemsPerPage" total-items="paginationOptions.totalItems" ng-model="paginationOptions.currentPage" ng-change="reloadGrid()" items-per-page="paginationOptions.itemsPerPage"></grid-pagination>
-                         <md-input-container flex-offset-gt-xs="5" class="items-per-page">
-                            <md-select ng-init="paginationOptions.itemsPerPage = '10'" ng-model="paginationOptions.itemsPerPage" ng-change="reloadGrid()">
+                        <md-input-container flex-offset-gt-xs="5" class="items-per-page">
+                            <md-select aria-label="ResultsPerPage" ng-init="paginationOptions.itemsPerPage = '10'" ng-model="paginationOptions.itemsPerPage" ng-change="reloadGrid()">
                                 <md-option>10</md-option>
                                 <md-option>25</md-option>
                                 <md-option>50</md-option>
                                 <md-option>75</md-option>
                             </md-select>
                         </md-input-container>
-                    </div> 
+                    </div>
                 </div>
             </div>
             <div>
-                <!-- <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                    <thead>
-                        <tr>
-                            <th sortable="code" class="sortable mdl-data-table__cell--non-numeric">
-                                <span>Order #</span>
-                            </th>
-                            <th class="st-sort-disable th-dropdown">
-                                <md-select filter-by="statusDisplay" filter-type="select" ng-model="status" placeholder="Status" ng-change="filter()">
-                                    <md-option value="">All Statuses</md-option>
-                                    <md-option ng-repeat="option in statusOptions track by option.value" value="{{option.value}}">
-                                        {{option.text}}
-                                    </md-option>
-                                </md-select>
-                            </th>
-                            <th sortable="placed" class="sortable">
-                                <span>Date Placed</span>
-                            </th>
-                            <th sortable='total.value' class="sortable">
-                                <span>Total</span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr grid-item>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span ng-bind="item.code"></span>
-                            </td>
-                            <td ng-bind="item.statusDisplay"></td>
-                            <td ng-bind="item.placed | date:'MM/dd/yyyy'"></td>
-                            <td ng-bind="item.total.formattedValue"></td>
-                        </tr>
-                    </tbody>
-                </table> -->
                 <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                     <thead>
                         <tr>
-                            <th sortable="code" class="sortable mdl-data-table__cell--non-numeric"><span>ID</span></th>
+                            <th sortable="curriculum.ID" class="sortable mdl-data-table__cell--non-numeric"><span>ID</span></th>
                             <th class="st-sort-disable th-dropdown">
-                              <md-select filter-type="statusDisplay" filter-type="select" ng-model="selectedStatus" placeholder="STATUS" ng-change="filter()">
-                                <md-option ng-repeat="status in statuses track by status.id">{{ status.name }}</md-option>
-                              </md-select>
-                            </th>                           
-                            <th>START DATE</th>
-                            <th>END DATE</th>
+                                <md-select filter-type="statusDisplay" filter-type="select" ng-model="selectedStatus" placeholder="STATUS" ng-change="filter()">
+                                    <md-option ng-repeat="status in statuses track by status.id">{{ status.name }}</md-option>
+                                </md-select>
+                            </th>
+                            <th sortable="placed" class="sortable">START DATE</th>
+                            <th sortable="placed" class="sortable">END DATE</th>
                             <th>TOTAL DAYS</th>
                             <th>TOTAL WEEKS</th>
                             <th>DONE DAYS</th>
@@ -91,67 +58,29 @@
                             <th>PERCENTAGE DONE</th>
                         </tr>
                     </thead>
-                  <tbody ng-repeat="curriculum in dataSet" ng-click='ShowHide($index)'>
-                      <tr>
-                          <td>{{curriculum.ID}}</td>
-                          <td>{{curriculum.Status}}</td>
-                          <td>{{curriculum.StartDate}}</td>
-                          <td>{{curriculum.EndDate}}</td>
-                          <td>{{curriculum.TotalDays}}</td>
-                          <td>{{curriculum.TotalWeeks}}</td>
-                          <td>{{curriculum.DoneDays}}</td>
-                          <td>{{curriculum.DoneWeeks}}</td>
-                          <td>{{curriculum.RemainingDays }}</td>
-                          <td>{{curriculum.RemainingWeeks}}</td>
-                          <td>{{curriculum.PercentageDone}}</td>
-                      </tr>
-                      <tr ng-show='num == $index'>
-                          <td colspan="10">
-                              <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                                  <thead>
-                                      <tr>
-                                          <th>DAY</th>
-                                          <th>STANDING</th>
-                                          <th>STRIKING</th>
-                                          <th>TURNING</th>
-                                          <th>CHANGING</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <tr ng-repeat="program in dataSet[$index].DailyProgram">
-                                          <td>{{program.Day}}</td>
-                                          <td>
-                                              <div ng-repeat="method in program.Standing.Method">
-                                                  <p>{{method | RemoveChar}}</p>
-                                              </div>
-                                          </td>
-                                          <td>
-                                              <div ng-repeat="method in program.Striking.Method">
-                                                  <p>{{method | RemoveChar}}</p>
-                                              </div>
-                                          </td>
-                                          <td>
-                                              <div ng-repeat="method in program.Turning.Method">
-                                                  <p>{{method | RemoveChar}}</p>
-                                              </div>
-                                          </td>
-                                          <td>
-                                              <div ng-repeat="method in program.Changing.Method">
-                                                  <p>{{method | RemoveChar}}</p>
-                                              </div>
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </td>
-                      </tr>
-                  </tbody>
-              </table>
+                    <tbody>
+                        <tr grid-item ng-click="showDialog($event, item.ID)"">
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <span ng-bind="item.ID"></span>
+                            </td>
+                            <td ng-bind="item.Status"></td>
+                            <td ng-bind="item.StartDate "></td>
+                            <td ng-bind="item.EndDate"></td>
+                            <td ng-bind="item.TotalDays"></td>
+                            <td ng-bind="item.TotalWeeks"></td>
+                            <td ng-bind="item.DoneDays"></td>
+                            <td ng-bind="item.DoneWeeks"></td>
+                            <td ng-bind="item.RemainingDays"></td>
+                            <td ng-bind="item.RemainingWeeks"></td>
+                            <td ng-bind="item.PercentageDone"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <!-- <div layout-xs="column" layout="row" layout-align-xs="end end" layout-align="end center">
+            <div layout-xs="column" layout="row" layout-align-xs="end end" layout-align="end center">
                 <grid-pagination max-size="5" boundary-links="true" class="pagination" ng-if="paginationOptions.totalItems  > paginationOptions.itemsPerPage" total-items="paginationOptions.totalItems" ng-model="paginationOptions.currentPage" ng-change="reloadGrid()" items-per-page="paginationOptions.itemsPerPage"></grid-pagination>
                 <md-input-container flex-offset-gt-xs="5" class="items-per-page">
-                    <md-select ng-init="paginationOptions.itemsPerPage = '10'" ng-model="paginationOptions.itemsPerPage" ng-change="reloadGrid()">
+                    <md-select aria-label="ResultsPerPage" ng-init="paginationOptions.itemsPerPage = '10'" ng-model="paginationOptions.itemsPerPage" ng-change="reloadGrid()">
                         <md-option>10</md-option>
                         <md-option>25</md-option>
                         <md-option>50</md-option>
@@ -159,7 +88,6 @@
                     </md-select>
                 </md-input-container>
             </div>
-        </div>-->
-    </div> 
-</md-content>
-</div>
+        </div>
+    </div>
+ </md-content>
