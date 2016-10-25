@@ -1,19 +1,19 @@
 <md-toolbar layout="row" layout-align="center">
-    <div class="md-toolbar-tools" flex-gt-md="60" flex-md="80" flex-sm="100">
+    <div class="md-toolbar-tools" flex-gt-md="100" flex-md="100" flex-sm="100">
         <div flex-gt-sm="80" flex-sm="100" layout="row" layout-align="start center">
-            <span>Training Schedule</span>
+            <span>TRAINING SCHEDULE</span>
         </div>
         <div flex-gt-sm="20" flex-xs="100">
             <div layout="row" layout-align="right">
                 <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs">
-                    <input ng-model="ID" class="md-input" ng-change="gridActions.filter()" id="order" placeholder="Search by ID #" filter-by="ID" filter-type="text" aria-invalid="false">
+                    <input ng-model="SecondaryAnimal" class="md-input" ng-change="gridActions.filter()" id="order" placeholder="Search by Animal #" filter-by="SecondaryAnimal" filter-type="text" aria-invalid="false">
                 </md-input-container>
             </div>
         </div>
     </div>
 </md-toolbar>
 <md-content layout-padding layout="row" layout-align="center">
-    <div flex-gt-md="60" flex-md="80" flex-xs="100">
+    <div flex-gt-md="100" flex-md="100" flex-xs="100">
         <div grid-data id='test' grid-options="gridOptions" grid-actions="gridActions">
             <div layout-gt-sm="row" layout-sm="column" layout-align="center">
                 <div flex-gt-sm="25" flex-sm="100" layout="row" layout-align="start center">
@@ -43,6 +43,8 @@
                                     <md-option ng-repeat="status in statuses track by status.id">{{ status.name }}</md-option>
                                 </md-select>
                             </th>
+                            <th sortable="PrimaryAnimal" class="sortable">PRIMARY ANIMAL</th>
+                            <th sortable="SecondaryAnimal" class="sortable">SECONDARY ANIMAL</th>
                             <th sortable="StartDate" class="sortable">START DATE</th>
                             <th sortable="placed" class="sortable">END DATE</th>
                             <th>TOTAL DAYS</th>
@@ -59,16 +61,18 @@
                             <td class="mdl-data-table__cell--non-numeric ">
                                 <span ng-bind="item.ID "></span>
                             </td>
-                            <td ng-bind="item.Status "></td>
-                            <td ng-bind="item.StartDate "></td>
-                            <td ng-bind="item.EndDate "></td>
-                            <td ng-bind="item.TotalDays "></td>
-                            <td ng-bind="item.TotalWeeks "></td>
-                            <td ng-bind="item.DoneDays "></td>
-                            <td ng-bind="item.DoneWeeks "></td>
-                            <td ng-bind="item.RemainingDays "></td>
-                            <td ng-bind="item.RemainingWeeks "></td>
-                            <td ng-bind="item.PercentageDone "></td>
+                            <td ng-bind="item.Status"></td>
+                            <td ng-bind="item.PrimaryAnimal"></td>
+                            <td ng-bind="item.SecondaryAnimal"></td>
+                            <td ng-bind="item.StartDate"></td>
+                            <td ng-bind="item.EndDate"></td>
+                            <td ng-bind="item.TotalDays"></td>
+                            <td ng-bind="item.TotalWeeks"></td>
+                            <td ng-bind="item.DoneDays"></td>
+                            <td ng-bind="item.DoneWeeks"></td>
+                            <td ng-bind="item.RemainingDays"></td>
+                            <td ng-bind="item.RemainingWeeks"></td>
+                            <td ng-bind="item.PercentageDone"></td>
                         </tr>
                     </tbody>
                 </table>

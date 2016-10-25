@@ -130,66 +130,65 @@
                 $mdDialog.show({
                     parent: parentEl,
                     targetEvent: $event,
-                    template: '<style> .parentContainer { display: flex } .parentContainer > div { flex: 1 } </style><md-dialog aria-label="List dialog">' +
-                        '  <md-dialog-content>' +
-                        '   <md-list>' +
-                        '      <md-list-item ng-repeat="item in items">' +
-
-                        '       <div class=\'parentContainer\'>' +
-
-                        '       <div class=\'childContainer\'>' +
-                        '       <md-list>' +
-                        '       <strong>DAY</strong><br />' +
-                        '        {{ item[\'Day\']}}   ' +
-                        '       </md-list>' +
-                        '       </div>' +
-
-                        '       <div class=\'childContainer\'>' +
-                        '       <md-list>' +
-                        '       <strong>STANDING</strong>' +
-                        '           <md-list-item ng-repeat="method in item[\'Standing\'][\'Method\']">' +
-                        '               <span>{{method | RemoveChar}}</span>' +
-                        '           </md-list-item>' +
-                        '       </md-list>' +
-                        '       </div>' +
-
-                        '       <div class=\'childContainer\'>' +
-                        '       <md-list>' +
-                        '       <strong>STRIKING</strong>' +
-                        '           <md-list-item ng-repeat="method in item[\'Striking\'][\'Method\']">' +
-                        '               {{method | RemoveChar}}' +
-                        '           </md-list-item>' +
-                        '       </md-list>' +
-                        '       </div>' +
-
-                        '       <div class=\'childContainer\'>' +
-                        '       <md-list>' +
-                        '       <strong>TURNING</strong>' +
-                        '           <md-list-item ng-repeat="method in item[\'Turning\'][\'Method\']">' +
-                        '               {{method | RemoveChar}}' +
-                        '           </md-list-item>' +
-                        '       </md-list>' +
-                        '       </div>' +
-
-                        '       <div class=\'childContainer\'>' +
-                        '       <md-list>' +
-                        '       <strong>CHANGING</strong>' +
-                        '           <md-list-item ng-repeat="method in item[\'Changing\'][\'Method\']">' +
-                        '               {{method | RemoveChar}}' +
-                        '           </md-list-item>' +
-                        '       </md-list>' +
-                        '       </div>' +
-
-                        '       </div>' +
-                        '      </md-list-item>' +
-                        '   </md-list>' +
-                        '  </md-dialog-content>' +
-                        '  <md-dialog-actions>' +
-                        '    <md-button ng-click="closeDialog()" class="md-primary">' +
-                        '      Close Dialog' +
-                        '    </md-button>' +
+                    template: '' +
+                    '<md-dialog aria-label="List dialog">' +
+                    '       <md-toolbar layout="row" layout-align="center">' +
+                    '            <div class="md-toolbar-tools" flex-gt-md="100" flex-md="100" flex-sm="100">' +
+                    '               <div flex-gt-sm="80" flex-sm="100" layout="row" layout-align="start center">' +
+                    '                   <span>WEEKLY SCHEDULE</span>' +
+                    '               </div>' +
+                    '           </div>' +
+                    '       </md-toolbar>' +
+                    '       <md-content layout-padding layout="row" layout-align="center">' +
+                    '           <div flex-gt-md="100" flex-md="100" flex-xs="100">' +
+                    '           <table ng-repeat="item in items" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">' +
+                    '               <thead>' +           
+                    '                   <tr>' +
+                    '                       <th>DAY</th>' +                    
+                    '                       <th>STANDING</th>' +
+                    '                       <th>STRIKING</th>' +
+                    '                       <th>TURNING</th>' +
+                    '                       <th>CHANGING</th>' +
+                    '                   </tr>' +
+                    '               </thead>' +
+                    '               <tbody>' +
+                    '                   <tr grid-item>' +
+                    '                       <td>'+
+                    '                           <div>'+
+                    '                               {{item[\'Day\'] }}' +
+                    '                           </div>' +
+                    '                       </td>' +                    
+                    '                       <td>'+
+                    '                           <div ng-repeat="method in item[\'Standing\'][\'Method\']">'+
+                    '                               {{method | RemoveChar}}' +
+                    '                           </div>' +
+                    '                       </td>' +
+                     '                       <td>'+
+                    '                           <div ng-repeat="method in item[\'Striking\'][\'Method\']">'+
+                    '                               {{method | RemoveChar}}' +
+                    '                           </div>' +
+                    '                       </td>' +
+                    '                       <td>'+
+                    '                           <div ng-repeat="method in item[\'Turning\'][\'Method\']">'+
+                    '                               {{method | RemoveChar}}' +
+                    '                           </div>' +
+                    '                       </td>' +
+                    '                       <td>'+
+                    '                           <div ng-repeat="method in item[\'Changing\'][\'Method\']">'+
+                    '                               {{method | RemoveChar}}' +
+                    '                           </div>' +
+                    '                       </td>' +
+                    '                   </tr>' +
+                    '               </tbody>' +
+                    '           </table>' +
+                    '           </div>' +
+                    '       </md-content>' +
+                    '   <md-dialog-actions>' +
+                    '    <md-button ng-click="closeDialog()" class="md-primary">' +
+                    '      Close Dialog' +
+                    '    </md-button>' +
                         '  </md-dialog-actions>' +
-                        '</md-dialog>',
+                    '</md-dialog>',
                     locals: {
                         items: $scope.gridOptions.data[$scope.id].DailyProgram,
                         id: $scope.id

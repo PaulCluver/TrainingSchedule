@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <Curriculums>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Bear</SecondaryAnimal>
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -203,6 +205,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Phoenix</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -405,6 +409,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Rooster</SecondaryAnimal>
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -607,6 +613,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Dragon</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -809,6 +817,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Bear</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -1011,6 +1021,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Phoenix</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -1213,6 +1225,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Rooster</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -1415,6 +1429,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Dragon</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -1617,6 +1633,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Bear</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -1819,6 +1837,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Phoenix</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -2021,6 +2041,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Rooster</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -2223,6 +2245,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Dragon</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -2425,6 +2449,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Bear</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -2627,6 +2653,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Phoenix</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -2829,6 +2857,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Rooster</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -3031,6 +3061,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Dragon</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -3233,6 +3265,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Bear</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -3435,6 +3469,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Phoenix</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -3637,6 +3673,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Rooster</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -3839,6 +3877,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Dragon</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -4041,6 +4081,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Bear</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -4243,6 +4285,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Phoenix</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -4445,6 +4489,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Rooster</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -4647,6 +4693,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Dragon</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -4849,6 +4897,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Bear</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -5051,6 +5101,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Phoenix</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -5253,6 +5305,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Rooster</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -5455,6 +5509,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Dragon</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -5657,6 +5713,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Bear</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -5859,6 +5917,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Phoenix</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -6061,6 +6121,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Rooster</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -6263,6 +6325,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Dragon</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -6465,6 +6529,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Bear</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -6667,6 +6733,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Phoenix</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>
@@ -6869,6 +6937,8 @@
     </DailyProgram>
   </Curriculum>
   <Curriculum>
+    <PrimaryAnimal>Lion</PrimaryAnimal>
+    <SecondaryAnimal>Rooster</SecondaryAnimal>    
     <DailyProgram>
       <Day>1</Day>
       <Standing>

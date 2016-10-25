@@ -10,7 +10,8 @@ html, body {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 [tabindex='-1']:focus {
   outline: none; }
@@ -2214,7 +2215,8 @@ md-grid-list {
       overflow: hidden;
       position: absolute;
       left: 0;
-      right: 0; }
+      right: 0; 
+    }
       md-grid-list md-grid-tile md-grid-tile-header h3,
       md-grid-list md-grid-tile md-grid-tile-header h4,
       md-grid-list md-grid-tile md-grid-tile-footer h3,
@@ -2228,7 +2230,8 @@ md-grid-list {
       md-grid-list md-grid-tile md-grid-tile-footer h4 {
         font-size: 12px; }
     md-grid-list md-grid-tile md-grid-tile-header {
-      top: 0; }
+      top: 0; 
+    }
     md-grid-list md-grid-tile md-grid-tile-footer {
       bottom: 0; }
 
