@@ -1,0 +1,23 @@
+<md-content layout-padding="">
+    <form name="commentsForm" ng-controller="TrainingCommentsCtrl" ng-submit="submit()">
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>Comment</label>
+                    <textarea required="" name="comment" ng-model="comments.comment"></textarea>
+                    <div ng-messages="comments.comment.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container flex="50">
+                    <label>Date</label>
+                    <md-datepicker required="" ng-model="comments.date" md-placeholder="Enter date"></md-datepicker>
+                    <div ng-messages="comments.date.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+            </div>
+        <div>
+            <md-button type="submit">Submit</md-button>
+        </div>
+    </form>
+</md-content>

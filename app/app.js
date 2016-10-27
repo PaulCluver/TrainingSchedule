@@ -2,17 +2,23 @@
 
     "use strict";
 
-    var trainingScheduleApp = angular.module('trainingScheduleApp', ['ui.router', 'dataGrid', 'pagination', 'ngMaterial']);
+    var trainingApp = angular.module('trainingApp', ['ui.router', 'dataGrid', 'pagination', 'ngMaterial', 'ngMessages', 'material.svgAssetsCache']);
 
-    trainingScheduleApp.constant('VERSION', '0.1');
+    trainingApp.constant('VERSION', '0.1');
 
-    trainingScheduleApp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $mdDateLocaleProvider) {
+    trainingApp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $mdDateLocaleProvider) {
 
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('TrainingSchedule');
         $stateProvider
-            .state('home', {
-                url: '/home',
-                templateUrl: 'partials/home/home.html'
+            .state('TrainingSchedule', {
+                url: '/TrainingSchedule',
+                controller: 'TrainingScheduleCtrl',
+                templateUrl: 'partials/TrainingSchedule/TrainingSchedule.html'
+            })
+            .state('TrainingComments', {
+                url: '/TrainingComments',
+                controller: 'TrainingCommentsCtrl',
+                templateUrl: 'partials/TrainingComments/TrainingComments.html'
             });
 
         $mdDateLocaleProvider.formatDate = function(date) {
@@ -20,7 +26,7 @@
         };
     });
 
-    trainingScheduleApp.factory('DataSource', ['$http', function($http) {
+    trainingApp.factory('DataSource', ['$http', function($http) {
         return {
             get: function(file, callback, transform) {
                 $http.get(
@@ -36,7 +42,7 @@
         }
     }]);
 
-    trainingScheduleApp.controller('appCtrl', ['$scope', '$mdDialog', 'DataSource', function($scope, $mdDialog, DataSource) {
+    trainingApp.controller('TrainingScheduleCtrl', ['$scope', '$mdDialog', 'DataSource', function($scope, $mdDialog, DataSource) {
 
         $scope.gridOptions = {
             data: [],
@@ -131,64 +137,64 @@
                     parent: parentEl,
                     targetEvent: $event,
                     template: '' +
-                    '<md-dialog aria-label="List dialog">' +
-                    '       <md-toolbar layout="row" layout-align="center">' +
-                    '            <div class="md-toolbar-tools" flex-gt-md="100" flex-md="100" flex-sm="100">' +
-                    '               <div flex-gt-sm="80" flex-sm="100" layout="row" layout-align="start center">' +
-                    '                   <span>WEEKLY SCHEDULE</span>' +
-                    '               </div>' +
-                    '           </div>' +
-                    '       </md-toolbar>' +
-                    '       <md-content layout-padding layout="row" layout-align="center">' +
-                    '           <div flex-gt-md="100" flex-md="100" flex-xs="100">' +
-                    '           <table ng-repeat="item in items" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">' +
-                    '               <thead>' +           
-                    '                   <tr>' +
-                    '                       <th>DAY</th>' +                    
-                    '                       <th>STANDING</th>' +
-                    '                       <th>STRIKING</th>' +
-                    '                       <th>TURNING</th>' +
-                    '                       <th>CHANGING</th>' +
-                    '                   </tr>' +
-                    '               </thead>' +
-                    '               <tbody>' +
-                    '                   <tr grid-item>' +
-                    '                       <td>'+
-                    '                           <div>'+
-                    '                               {{item[\'Day\'] }}' +
-                    '                           </div>' +
-                    '                       </td>' +                    
-                    '                       <td>'+
-                    '                           <div ng-repeat="method in item[\'Standing\'][\'Method\']">'+
-                    '                               {{method | RemoveChar}}' +
-                    '                           </div>' +
-                    '                       </td>' +
-                     '                       <td>'+
-                    '                           <div ng-repeat="method in item[\'Striking\'][\'Method\']">'+
-                    '                               {{method | RemoveChar}}' +
-                    '                           </div>' +
-                    '                       </td>' +
-                    '                       <td>'+
-                    '                           <div ng-repeat="method in item[\'Turning\'][\'Method\']">'+
-                    '                               {{method | RemoveChar}}' +
-                    '                           </div>' +
-                    '                       </td>' +
-                    '                       <td>'+
-                    '                           <div ng-repeat="method in item[\'Changing\'][\'Method\']">'+
-                    '                               {{method | RemoveChar}}' +
-                    '                           </div>' +
-                    '                       </td>' +
-                    '                   </tr>' +
-                    '               </tbody>' +
-                    '           </table>' +
-                    '           </div>' +
-                    '       </md-content>' +
-                    '   <md-dialog-actions>' +
-                    '    <md-button ng-click="closeDialog()" class="md-primary">' +
-                    '      Close Dialog' +
-                    '    </md-button>' +
+                        '<md-dialog aria-label="List dialog">' +
+                        '       <md-toolbar layout="row" layout-align="center">' +
+                        '            <div class="md-toolbar-tools" flex-gt-md="100" flex-md="100" flex-sm="100">' +
+                        '               <div flex-gt-sm="80" flex-sm="100" layout="row" layout-align="start center">' +
+                        '                   <span>WEEKLY SCHEDULE</span>' +
+                        '               </div>' +
+                        '           </div>' +
+                        '       </md-toolbar>' +
+                        '       <md-content layout-padding layout="row" layout-align="center">' +
+                        '           <div flex-gt-md="100" flex-md="100" flex-xs="100">' +
+                        '           <table ng-repeat="item in items" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">' +
+                        '               <thead>' +
+                        '                   <tr>' +
+                        '                       <th>DAY</th>' +
+                        '                       <th>STANDING</th>' +
+                        '                       <th>STRIKING</th>' +
+                        '                       <th>TURNING</th>' +
+                        '                       <th>CHANGING</th>' +
+                        '                   </tr>' +
+                        '               </thead>' +
+                        '               <tbody>' +
+                        '                   <tr grid-item>' +
+                        '                       <td>' +
+                        '                           <div>' +
+                        '                               {{item[\'Day\'] }}' +
+                        '                           </div>' +
+                        '                       </td>' +
+                        '                       <td>' +
+                        '                           <div ng-repeat="method in item[\'Standing\'][\'Method\']">' +
+                        '                               {{method | RemoveChar}}' +
+                        '                           </div>' +
+                        '                       </td>' +
+                        '                       <td>' +
+                        '                           <div ng-repeat="method in item[\'Striking\'][\'Method\']">' +
+                        '                               {{method | RemoveChar}}' +
+                        '                           </div>' +
+                        '                       </td>' +
+                        '                       <td>' +
+                        '                           <div ng-repeat="method in item[\'Turning\'][\'Method\']">' +
+                        '                               {{method | RemoveChar}}' +
+                        '                           </div>' +
+                        '                       </td>' +
+                        '                       <td>' +
+                        '                           <div ng-repeat="method in item[\'Changing\'][\'Method\']">' +
+                        '                               {{method | RemoveChar}}' +
+                        '                           </div>' +
+                        '                       </td>' +
+                        '                   </tr>' +
+                        '               </tbody>' +
+                        '           </table>' +
+                        '           </div>' +
+                        '       </md-content>' +
+                        '   <md-dialog-actions>' +
+                        '    <md-button ng-click="closeDialog()" class="md-primary">' +
+                        '      Close Dialog' +
+                        '    </md-button>' +
                         '  </md-dialog-actions>' +
-                    '</md-dialog>',
+                        '</md-dialog>',
                     locals: {
                         items: $scope.gridOptions.data[$scope.id].DailyProgram,
                         id: $scope.id
@@ -211,7 +217,20 @@
 
     }]);
 
-    trainingScheduleApp.filter('RemoveChar', function() {
+    trainingApp.controller('TrainingCommentsCtrl', ['$scope', function($scope) {
+        
+        $scope.submit = function() {
+
+            // if ($scope.comments.comment != null && $scope.comments.date != null) {
+            //     console.log($scope.comments.comment);
+            //     console.log($scope.comments.date);
+            // }
+        };
+
+        
+    }]);
+
+    trainingApp.filter('RemoveChar', function() {
 
         return function(input) {
             return input.replace(/_/g, " ");
